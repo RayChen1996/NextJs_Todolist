@@ -30,7 +30,14 @@ function FormBlock() {
           placeholder="新增待辦事項"
         />
 
-        <span className=" bg-black  rounded-lg p-2 w-10 text-center">+</span>
+        <span
+          onClick={() => {
+            alert("681 520");
+          }}
+          className=" bg-black  cursor-pointer rounded-lg p-2 w-10 text-center font-bold text-white"
+        >
+          +
+        </span>
       </label>
     </div>
   );
@@ -46,7 +53,7 @@ function DataListBlock() {
 
 function DataList() {
   return (
-    <div className="  relative  w-1/3 h-screen   bg-white  z-50  ">
+    <div className="  relative  w-2/3 md:w-1/3 h-screen   bg-white  z-50  ">
       <h1>681520</h1>
     </div>
   );
@@ -61,7 +68,7 @@ function CategoryBlock() {
 
   return (
     <div className="   w-full h-20  mt-2 flex flex-col justify-between items-center">
-      <ul className="rounded-tl-xl rounded-tr-xl  flex  w-1/3 mx-auto bg-white p-2 justify-around items-center">
+      <ul className="rounded-tl-xl rounded-tr-xl  flex  w-2/3 md:w-1/3 mx-auto bg-white p-2 justify-around items-center">
         <li
           onClick={() => {
             setFocus("ALL");
@@ -96,7 +103,7 @@ function CategoryBlock() {
           已完成
         </li>
       </ul>
-      <ul className="w-1/3 h-[0.9] flex">
+      <ul className="w-2/3 md:w-1/3  h-[0.9] flex">
         <li
           className={clsx(
             focus === "ALL" ? "bg-black w-1/3 h-[1.9px] " : " w-1/3"
