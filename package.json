@@ -9,19 +9,48 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
+    "next": "14.1.1",
+    "primereact": "^10.5.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.1"
+    "google-libphonenumber": "^3.2.33",
+    "@apollo/client": "^3.8.9",
+    "@hookform/resolvers": "^3.3.4",
+    "@tailwindcss/typography": "^0.5.10",
+    "clsx": "^2.1.0",
+    "date-fns": "^3.2.0",
+    "fast-equals": "^5.0.1",
+    "graphql": "^16.8.1",
+    "gray-matter": "^4.0.3",
+    "immer": "^10.0.3",
+    "lucide-react": "^0.308.0",
+ 
+    "numbro": "^2.4.0",
+    "qs": "^6.11.2",
+ 
+    "react-hook-form": "^7.49.3",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "swiper": "^11.0.6",
+    "zod": "^3.22.4",
+    "react-responsive": "^9.0.2",
+    "material-icons": "^1.13.12",
+    "zustand": "^4.4.7",
+    "jotai": "^2.6.0",
+    "react-countdown": "2.2.0",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.1",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.1"
+    "typescript": "^5",
+    "daisyui": "^4.5.0"
   }
 }
