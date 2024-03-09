@@ -15,8 +15,12 @@ export default function HeaderBlock() {
 function DisplayAccountBlock() {
   return (
     <ul className=" cursor-pointer flex gap-2">
-      <li>王小明的代辦</li>
-      <li>登出</li>
+      <li className=" hidden  text-sm md:text-lg md:flex justify-center items-center ">
+        王小明的代辦
+      </li>
+      <li className="text-sm md:text-lg flex justify-center mr-3  items-center ">
+        登出
+      </li>
     </ul>
   );
 }
