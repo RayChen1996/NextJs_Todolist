@@ -3,6 +3,7 @@ import Image from "next/image";
 import Bg from "../../public/bg.png";
 import HeaderBlock from "@/components/Layout/Basic/HeaderBlock";
 import BasicLayout from "@/components/Layout/Basic";
+import Placeholder from "@/components/TableCell/placeholder";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import ClosePng from "../../public/close1.png";
@@ -16,7 +17,7 @@ import {
 } from "react-hook-form";
 
 import axios from "axios";
-
+const BaseUrl = "https://todolist-api.hexschool.io";
 export default function Home() {
   const methods = useForm<{ tasks: Task[] }>({
     defaultValues: {
@@ -166,26 +167,30 @@ function DataList() {
   return (
     <div className="  relative  w-2/3 md:w-1/3 h-screen   bg-white  z-50  ">
       <ul>
-        {todoList.map((_task, index) => (
-          <li key={index} className="h-20 flex justify-around items-center">
-            <span className="flex justify-center gap-5 h-full items-center">
-              <input
-                id={`chx${index}`}
-                type="checkbox"
-                className="checkbox"
-                {...register(`tasks.${index}.completed` as const)}
-              />
-              <label htmlFor={`chx${index}`}>{_task?.title}</label>
-            </span>
-            <span
-              onClick={() => {
-                handleClickDelete(_task.id);
-              }}
-            >
-              <Image alt="" src={ClosePng} />
-            </span>
-          </li>
-        ))}
+        {todoList.length === 0 ? (
+          <Placeholder />
+        ) : (
+          todoList.map((_task, index) => (
+            <li key={index} className="h-20 flex justify-around items-center">
+              <span className="flex justify-center gap-5 h-full items-center">
+                <input
+                  id={`chx${index}`}
+                  type="checkbox"
+                  className="checkbox"
+                  {...register(`tasks.${index}.completed` as const)}
+                />
+                <label htmlFor={`chx${index}`}>{_task?.title}</label>
+              </span>
+              <span
+                onClick={() => {
+                  handleClickDelete(_task.id);
+                }}
+              >
+                <Image alt="" src={ClosePng} />
+              </span>
+            </li>
+          ))
+        )}
       </ul>
     </div>
   );
